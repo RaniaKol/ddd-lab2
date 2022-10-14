@@ -14,6 +14,16 @@
   </plan>
 </goal>
 
+  
+  <goal type="resolve" question_type="wh_question" predicate="temperature">
+    <plan>
+      <findout type="wh_question" predicate="city_to_search"/>
+      <findout type="wh_question" predicate="country_to_search"/>
+      <bind type="wh_question" predicate="something"/>
+      <invoke_service_query predicate="temperature" type="wh_question"/>
+    </plan>
+  </goal>
+  
   <goal type="resolve" question_type="wh_question" predicate="weather">
     <plan>
       <findout type="wh_question" predicate="city_to_search"/>
@@ -22,12 +32,5 @@
     </plan>
   </goal>
 
-  <goal type="resolve" question_type="wh_question" predicate="temperature">
-    <plan>
-      <findout type="wh_question" predicate="city_to_search"/>
-      <findout type="wh_question" predicate="country_to_search"/>
-      <bind type="wh_question" predicate="unit_type"/>
-      <invoke_service_query predicate="temperature" type="wh_question"/>
-    </plan>
-  </goal>
+  
 </domain>

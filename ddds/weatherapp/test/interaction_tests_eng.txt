@@ -1,6 +1,15 @@
 
+--- asking the weather (incremental)
+S> Do you want to know about the temperature or know the weather?
+U> I want to know the  weather
+S> What city?
+U> Athens
+S> What country?
+U> Greece
+S> The  weather is *
+
 --- asking the temperature (incremental)
-S> Do you want to know about the temperature or know the current weather?
+S> Do you want to know about the temperature or know the weather?
 U> I want to know the temperature
 S> What city?
 U> Athens
@@ -8,57 +17,48 @@ S> What country?
 U> Greece
 S> The temperature is * degrees
 
---- asking the current weather (incremental)
-S> Do you want to know about the temperature or know the current weather?
-U> I want to know the current weather
-S> What city?
-U> London
-S> What country?
-U> UK
-S> The current weather is *
-
 --- asking the temperature (overanswering)
-S> Do you want to know about the temperature or know the current weather?
+S> Do you want to know about the temperature or know the weather?
 U> can you tell me about the temperature
 S> What city?
 U> Gothenburg Sweden
 S> The temperature is * degrees
 
 --- asking the temperature (one-shot)
-S> Do you want to know about the temperature or know the current weather?
+S> Do you want to know about the temperature or know the weather?
 U> What is the temperature in Rome Italy
 S> The temperature is * degrees
 
---- asking the current weather (one-shot)
-S> Do you want to know about the temperature or know the current weather?
-U> What is the current weather in Gothenburg Sweden
-S> The current weather is *
+--- asking the  weather (one-shot)
+S> Do you want to know about the temperature or know the weather?
+U> What is the  weather in Gothenburg Sweden
+S> The  weather is *
 
 --- asking the temperature (overanswering)
-S> Do you want to know about the temperature or know the current weather?
+S> Do you want to know about the temperature or know the weather?
 U> can you tell me about the temperature
 S> What city?
 U> Rome Italy
 S> The temperature is * degrees
 
---- asking the current weather (overanswering)
-S> Do you want to know about the temperature or know the current weather?
-U> can you tell me the current weather
+--- asking the  weather (overanswering)
+S> Do you want to know about the temperature or know the weather?
+U> can you tell me the  weather
 S> What city?
 U> Athens Greece
-S> The current weather is * 
+S> The weather is * 
 
 --- asking the temperature in Kelvin
-S> Do you want to know about the temperature or know the current weather?
+S> Do you want to know about the temperature or know the weather?
 U> i want to know the temperature in Kelvin
 S> What city?
 U> Athens
 S> What country?
 U> Greece
-S> The temperature in Fahrenhet is * degrees
+S> The temperature in Kelvin is * degrees
 
 --- asking temperature 
-S> Do you want to know about the temperature or know the current weather?
+S> Do you want to know about the temperature or know the  weather?
 U> Can you tell me the temperature please
 S> What city?
 U> Gothenburg
