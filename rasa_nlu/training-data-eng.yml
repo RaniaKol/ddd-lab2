@@ -1,0 +1,354 @@
+version: "2.0"
+
+nlu:
+- intent: question::weather
+  examples: |
+    - weather
+    - I want to know the weather
+    - i want to find out the weather in [Athens]{"entity": "sort.city", "value": "individual.athens"}
+    - i want to find out the weather in [Gothenburg]{"entity": "sort.city", "value": "individual.gothenburg"}
+    - i want to find out the weather in [Oslo]{"entity": "sort.city", "value": "individual.oslo"}
+    - i want to find out the weather in [Rome]{"entity": "sort.city", "value": "individual.rome"}
+    - I want to find out the weather
+    - Tell me the weather
+    - What is the weather
+    - How's the weather
+    - What is the weather in [Athens]{"entity": "sort.city", "value": "individual.athens"}
+    - What is the weather in [Gothenburg]{"entity": "sort.city", "value": "individual.gothenburg"}
+    - What is the weather in [Oslo]{"entity": "sort.city", "value": "individual.oslo"}
+    - What is the weather in [Rome]{"entity": "sort.city", "value": "individual.rome"}
+    - Can you tell me the weather
+    - Can you tell me the weather in [Athens]{"entity": "sort.city", "value": "individual.athens"}
+    - Can you tell me the weather in [Gothenburg]{"entity": "sort.city", "value": "individual.gothenburg"}
+    - Can you tell me the weather in [Oslo]{"entity": "sort.city", "value": "individual.oslo"}
+    - Can you tell me the weather in [Rome]{"entity": "sort.city", "value": "individual.rome"}
+    - Is it warm in [Athens]{"entity": "sort.city", "value": "individual.athens"}
+    - Is it warm in [Gothenburg]{"entity": "sort.city", "value": "individual.gothenburg"}
+    - Is it warm in [Oslo]{"entity": "sort.city", "value": "individual.oslo"}
+    - Is it warm in [Rome]{"entity": "sort.city", "value": "individual.rome"}
+    - Is it cold in [Athens]{"entity": "sort.city", "value": "individual.athens"}
+    - Is it cold in [Gothenburg]{"entity": "sort.city", "value": "individual.gothenburg"}
+    - Is it cold in [Oslo]{"entity": "sort.city", "value": "individual.oslo"}
+    - Is it cold in [Rome]{"entity": "sort.city", "value": "individual.rome"}
+    - Is it cloudy in
+
+- intent: question::temperature
+  examples: |
+    - temperature
+    - What is the temperature
+    - What's the temperature like
+    - tell me the temperature
+    - I want to know the temperature
+    - can you give me the temperature
+    - what's the temperature outside
+    - how many [Celsius]{"entity": "sort.unit", "value": "individual.metric"} is it in [Athens]{"entity": "sort.city", "value": "individual.athens"}
+    - how many [Fahrenheit]{"entity": "sort.unit", "value": "individual.imperial"} is it in [Rome]{"entity": "sort.city", "value": "individual.rome"}
+    - how many [Kelvin]{"entity": "sort.unit", "value": "individual.standard"} is it in [Athens]{"entity": "sort.city", "value": "individual.athens"}
+    - I want to know the temperature in [Celsius]{"entity": "sort.unit", "value": "individual.metric"}
+    - I want to know the temperature in [Fahrenheit]{"entity": "sort.unit", "value": "individual.imperial"}
+    - I want to know the temperature in [Kelvin]{"entity": "sort.unit", "value": "individual.standard"}
+    - What is the temperature [Celsius]{"entity": "sort.unit", "value": "individual.metric"}
+    - What is the temperature [Fahrenheit]{"entity": "sort.unit", "value": "individual.imperial"}
+    - What is the temperature [Kelvin]{"entity": "sort.unit", "value": "individual.standard"}
+    - What is the temperature in [Celsius]{"entity": "sort.unit", "value": "individual.metric"} in [Athens]{"entity": "sort.city", "value": "individual.athens"}
+    - What is the temperature in [Fahrenheit]{"entity": "sort.unit", "value": "individual.imperial"} in [Oslo]{"entity": "sort.city", "value": "individual.oslo"}
+    - What is the temperature in [Kelvin]{"entity": "sort.unit", "value": "individual.standard"} in [Oslo]{"entity": "sort.city", "value": "individual.oslo"}
+    - tell me the temperature in [Celsius]{"entity": "sort.unit", "value": "individual.metric"}
+    - tell me the temperature in [Fahrenheit]{"entity": "sort.unit", "value": "individual.imperial"}
+    - tell me the temperature in [Kelvin]{"entity": "sort.unit", "value": "individual.standard"}
+    - how many degrees is it in [Athens]{"entity": "sort.city", "value": "individual.athens"}
+    - how many degrees is it in [Gothenburg]{"entity": "sort.city", "value": "individual.gothenburg"}
+    - how many degrees is it in [Oslo]{"entity": "sort.city", "value": "individual.oslo"}
+    - how many degrees is it in [Rome]{"entity": "sort.city", "value": "individual.rome"}
+    - what is the temperature in [Athens]{"entity": "sort.city", "value": "individual.athens"}
+    - what is the temperature in [Gothenburg]{"entity": "sort.city", "value": "individual.gothenburg"}
+    - what is the temperature in [Oslo]{"entity": "sort.city", "value": "individual.oslo"}
+    - what is the temperature in [Rome]{"entity": "sort.city", "value": "individual.rome"}
+
+- intent: answer
+  examples: |
+    - [Rome]{"entity": "sort.city", "value": "individual.rome"}
+    - [Gothenburg]{"entity": "sort.city", "value": "individual.gothenburg"}
+    - [Athens]{"entity": "sort.city", "value": "individual.athens"}
+    - [Oslo]{"entity": "sort.city", "value": "individual.oslo"}
+    - [Greece]{"entity": "sort.country", "value": "individual.greece"}
+    - [Norway]{"entity": "sort.country", "value": "individual.norway"}
+    - [Italy]{"entity": "sort.country", "value": "individual.italy"}
+    - [Sweden]{"entity": "sort.country", "value": "individual.sweden"}
+    - [single](sort.string)
+    - [double word](sort.string)
+    - [three in one](sort.string)
+    - [hey make it four](sort.string)
+    - [the more the merrier five](sort.string)
+    - [calm down and count to six](sort.string)
+    - [bring them through to the jolly seven](sort.string)
+    - [noone counts toes like an eight toed guy](sort.string)
+    - [it matters to make sense for nine of us](sort.string)
+    - [would you bring ten or none to a desert island](sort.string)
+    - [Fahrenheit]{"entity": "sort.unit", "value": "individual.imperial"}
+    - [Celsius]{"entity": "sort.unit", "value": "individual.metric"}
+    - [Kelvin]{"entity": "sort.unit", "value": "individual.standard"}
+    - [Athens]{"entity": "sort.city", "value": "individual.athens"} [Sweden]{"entity": "sort.country", "value": "individual.sweden"}
+    - [Gothenburg]{"entity": "sort.city", "value": "individual.gothenburg"} [Norway]{"entity": "sort.country", "value": "individual.norway"}
+    - [Oslo]{"entity": "sort.city", "value": "individual.oslo"} [Norway]{"entity": "sort.country", "value": "individual.norway"}
+    - [Rome]{"entity": "sort.city", "value": "individual.rome"} [Sweden]{"entity": "sort.country", "value": "individual.sweden"}
+    - yes [Rome]{"entity": "sort.city", "value": "individual.rome"}
+    - yes [three in one](sort.string)
+    - yes [Kelvin]{"entity": "sort.unit", "value": "individual.standard"}
+    - no [Gothenburg]{"entity": "sort.city", "value": "individual.gothenburg"}
+    - no [hey make it four](sort.string)
+    - no [Athens]{"entity": "sort.city", "value": "individual.athens"} [Sweden]{"entity": "sort.country", "value": "individual.sweden"}
+
+- intent: answer_negation
+  examples: |
+    - not [Rome]{"entity": "sort.city", "value": "individual.rome"}
+    - not [Gothenburg]{"entity": "sort.city", "value": "individual.gothenburg"}
+    - not [Athens]{"entity": "sort.city", "value": "individual.athens"}
+    - not [Oslo]{"entity": "sort.city", "value": "individual.oslo"}
+    - not [Greece]{"entity": "sort.country", "value": "individual.greece"}
+    - not [Norway]{"entity": "sort.country", "value": "individual.norway"}
+    - not [Italy]{"entity": "sort.country", "value": "individual.italy"}
+    - not [Sweden]{"entity": "sort.country", "value": "individual.sweden"}
+    - not [Fahrenheit]{"entity": "sort.unit", "value": "individual.imperial"}
+    - not [Celsius]{"entity": "sort.unit", "value": "individual.metric"}
+    - not [Kelvin]{"entity": "sort.unit", "value": "individual.standard"}
+
+- intent: NEGATIVE
+  examples: |
+    - aboard
+    - about
+    - above
+    - across
+    - after
+    - against
+    - along
+    - among
+    - as
+    - at
+    - on
+    - atop
+    - before
+    - behind
+    - below
+    - beneath
+    - beside
+    - between
+    - beyond
+    - but
+    - by
+    - come
+    - down
+    - during
+    - except
+    - for
+    - from
+    - in
+    - inside
+    - into
+    - less
+    - like
+    - near
+    - of
+    - off
+    - on
+    - onto
+    - opposite
+    - out
+    - outside
+    - over
+    - past
+    - save
+    - short
+    - since
+    - than
+    - then
+    - through
+    - throughout
+    - to
+    - toward
+    - under
+    - underneath
+    - unlike
+    - until
+    - up
+    - upon
+    - with
+    - within
+    - without
+    - worth
+    - is
+    - it
+    - the
+    - a
+    - am
+    - are
+    - them
+    - this
+    - that
+    - I
+    - you
+    - he
+    - she
+    - they
+    - them
+    - his
+    - her
+    - my
+    - mine
+    - their
+    - your
+    - us
+    - our
+    - how
+    - how's
+    - how is
+    - how's the
+    - how is the
+    - when
+    - when's
+    - when is
+    - when is the
+    - when's the
+    - what
+    - what is
+    - what's
+    - what's the
+    - what is the
+    - why
+    - why is
+    - why's
+    - why is the
+    - why's the
+    - do
+    - make
+    - tell
+    - start
+    - stop
+    - enable
+    - disable
+    - raise
+    - lower
+    - decrease
+    - increase
+    - act
+    - determine
+    - say
+    - ask
+    - go
+    - shoot
+    - wait
+    - hang on
+    - ok
+    - show
+    - help
+
+- intent: answer:yes
+  examples: |
+    - yes
+    - yeah
+    - yep
+    - sure
+    - ok
+    - of course
+    - very well
+    - fine
+    - right
+    - excellent
+    - okay
+    - perfect
+    - I think so
+
+- intent: answer:no
+  examples: |
+    - no
+    - nope
+    - no thanks
+    - no thank you
+    - negative
+    - don't want to
+    - don't
+    - do not
+    - please don't
+
+- intent: request:top
+  examples: |
+    - forget it
+    - never mind
+    - get me out of here
+    - start over
+    - beginning
+    - never mind that
+    - restart
+
+- intent: request:up
+  examples: |
+    - go back
+    - back
+    - previous
+    - back to the previous
+    - go to the previous
+    - go back to the previous one
+
+- intent: request:how
+  examples: |
+    - how do I do that
+    - how
+    - can you tell me how to do that
+    - I don't know how should I do that
+    - how can I do that
+
+- intent: report:done
+  examples: |
+    - I'm done
+    - done
+    - ready
+    - it's ready
+    - I'm ready
+    - completed
+    - check
+    - I have finished
+    - finished
+    - done and done
+    - it's done now
+    - okay next
+    - next
+    - next instruction
+
+- intent: icm:per*neg
+  examples: |
+    - repeat
+    - repeat it
+    - repeat that
+    - pardon
+    - sorry
+    - can you repeat that
+    - excuse me
+    - what was that
+    - what did you say
+    - come again
+
+- intent: icm:acc*neg:issue
+  examples: |
+    - I don't know
+    - I don't know that
+    - it doesn't matter
+
+- intent: thanks
+  examples: |
+    - thank you
+    - thank you very much
+    - thanks
+    - big thanks
+    - thanks a lot
+
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - good day
+    - what's up
+    - good evening
+    - good morning
+    - hey
+
+
